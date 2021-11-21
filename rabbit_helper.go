@@ -1,4 +1,4 @@
-package rabbit_helper
+package go_rabbit_helper
 
 import (
 	"fmt"
