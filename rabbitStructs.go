@@ -1,19 +1,19 @@
 package go_rabbit_helper
 
 type Rabbit struct {
-	Server    string  `yaml:"server"`
-	Host      string  `yaml:"host"`
-	Port      string  `yaml:"port"`
-	Username  string  `yaml:"username"`
-	Password  string  `yaml:"password" json:"-"`
-	Data      DataSet `yaml:"data" json:"-"`
-	Consumer  bool    `yaml:"consumer"`
-	Publisher bool    `yaml:"publisher"`
+	Server    string  `json:"server" yaml:"server"`
+	Host      string  `json:"host" yaml:"host"`
+	Port      string  `json:"port" yaml:"port"`
+	Username  string  `json:"username" yaml:"username"`
+	Password  string  `json:"-" yaml:"password"`
+	Data      DataSet `json:"-" yaml:"data" `
+	Consumer  bool    `json:"consumer" yaml:"consumer"`
+	Publisher bool    `json:"publisher" yaml:"publisher"`
 }
 
 type DataSet struct {
-	Queue        string `yaml:"queue"`
-	Exchange     string `yaml:"exchange"`
-	ExchangeType string `yaml:"exchange_type"`
-	RoutingKey   string `yaml:"routingKey"`
+	Queue        string `json:"queue" yaml:"queue"`
+	Exchange     string `json:"exchange" yaml:"exchange"`
+	ExchangeType string `json:"exchange_type" yaml:"exchange_type"`
+	RoutingKey   string `json:"routingKey" yaml:"routingKey"`
 }
